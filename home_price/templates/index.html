@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Undeviating 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140322
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>House Prices Predict</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+{% load static %}
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+        	<span class="icon icon-cog"></span>
+			<h1 style="color:white">Predicted House Pirce</h1>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+    <div id="three-column" class="container">
+        <!-- <div><span class="arrow-down"></span></div> -->
+        <div id="tbox1">
+            <img src="{% static 'images/banner.jpg' %}" width="360" height="200">
+        </div>
+        <div id="tbox2" style="padding-left:80px">
+            <div class="title">
+                <p><h2>Select Feature</h2></p>
+                <form action="/form_handler/" method="get">
+                    <p><label>Neighborhood</label>
+                        <select name="Neighborhood">
+                            <option value="Blmngtn">Blmngtn</option>
+                            <option value="Blueste">Blueste</option>
+                            <option value="ClearCr">ClearCr</option>
+                            <option value="CollgCr">CollgCr</option>
+                            <option value="Edwards">Edwards</option>
+                            <option value="Gilbert">Gilbert</option>
+                            <option value="IDOTRR">IDOTRR</option>
+                            <option value="NoRidge">NoRidge</option>
+                            <option value="NridgHt">NridgHt</option>   
+                            <option value="OldTown">OldTown</option>                        
+                            <option value="Sawyer">Sawyer</option>    
+                            <option value="SawyerW">SawyerW</option>    
+                            <option value="Timber">Timber</option>    
+                        </select>
+                    </p>
+                    <!-- <p><label>MSZoning</label>
+                        <select name="MSZoning">
+                            <option value="C(all)">C(all)</option>
+                            <option value="FV">FV</option>
+                            <option value="RH">RH</option>
+                            <option value="RL">RL</option>
+                            <option value="RM">RM</option>
+                        </select>
+                    </p> -->
+                    <p><label>Total Square Meters</label>
+                        <input type="text" name="sm" class="text">
+                    </p>
+                    <p><label>The number of bathroom</label>
+                        <input type="text" name="bath" class="text">
+                    </p>
+                    <!-- <p><label>LandContour</label>
+                        <select name="LandContour">
+                            <option value="Bnk">Bnk</option>
+                            <option value="HLS">HLS</option>
+                            <option value="Low">Low</option>
+                            <option value="Lvl">Lvl</option>
+                        </select>
+                    </p> -->
+                    <!-- <p><label>LotArea(square meter)</label>
+                        <input type="text" name="LotArea" class="text">
+                    </p> -->
+                    <p><label>YearBuilt</label>
+                        <input type="text" name="YearBuilt" class="text">
+                    </p>                    
+                    <input type="submit" class="button" value="Submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
